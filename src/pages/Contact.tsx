@@ -1,0 +1,1 @@
+export default function Contact(){return <div className='container stack'><h1 className='section-title'>Contact</h1><p className='muted'>Details coming soon.</p></div>}

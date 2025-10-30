@@ -1,0 +1,1 @@
+export default function Reviews(){return <div className='container stack'><h1 className='section-title'>Reviews</h1><p className='muted'>Google reviews feed coming soon.</p></div>}

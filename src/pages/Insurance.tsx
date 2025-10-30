@@ -1,0 +1,1 @@
+export default function Insurance(){return <div className='container stack'><h1 className='section-title'>Insurance & New Patients</h1><p className='muted'>Details coming soon.</p></div>}

@@ -1,0 +1,295 @@
+{
+    "practice_profile": {
+        "name": "Chrome Dental",
+        "domain": "https://www.chromedentistry.com",
+        "google_business_profile_url": "https://maps.app.goo.gl/i4MLDKuxgMcxUFJq6",
+        "address": {
+            "street": "1551 Park Place, Suite 300",
+            "city": "Green Bay",
+            "state": "WI",
+            "postal_code": "54304"
+        },
+        "contact": {
+            "phone": "(920) 365-5365",
+            "email": "info@chromedentistry.com",
+            "booking_url": "https://bookit.dentrixascend.com/v1/view/organization/7174/index.html?amp;mode=externalLink#/perspectives/3"
+        },
+        "hours": {
+            "monday": "9:00 AM – 5:00 PM",
+            "tuesday": "9:00 AM – 5:00 PM",
+            "wednesday": "9:00 AM – 5:00 PM",
+            "thursday": "9:00 AM – 5:00 PM",
+            "friday": "9:00 AM – 5:00 PM",
+            "saturday": "Closed",
+            "sunday": "Closed"
+        },
+        "languages": [
+            "English",
+            "Spanish",
+            "Arabic"
+        ],
+        "accepts_medicaid_forwardhealth": true,
+        "insurance_summary": {
+            "headline_points": [
+                "Medicaid / ForwardHealth welcomed",
+                "Most PPO plans accepted",
+                "Cash discounts & payment plans",
+                "CareCredit available",
+                "We help maximize benefits; plan limits/frequencies may apply"
+            ],
+            "examples_listed": [
+                "ForwardHealth (BadgerCare/WI Medicaid)",
+                "Aetna",
+                "Anthem Blue Cross",
+                "Careington",
+                "Cigna",
+                "Delta Dental",
+                "Encore Dental",
+                "MetLife",
+                "UnitedHealthcare",
+                "UMR",
+                "Guardian",
+                "Molina",
+                "Principal",
+                "Renaissance",
+                "Scion Dental",
+                "Assurant",
+                "GEHA",
+                "WEA"
+            ]
+        }
+    },
+    "doctors": [
+        {
+            "name": "Dr. Shazad Alkurdi",
+            "focus": "Cosmetic & General Dentistry",
+            "bio_short": "Midwestern University (Chicago) graduate; known for compassionate, aesthetic-focused care.",
+            "headshot_asset": "dr_shazad_alkurdi.png (provided)"
+        },
+        {
+            "name": "Dr. Syed",
+            "focus": "General Dentistry; OMFS internship",
+            "bio_short": "UIC College of Dentistry; OMFS internship at NYU; 10+ years experience; serves Appleton/Fox Valley; wildlife photography enthusiast.",
+            "headshot_asset": "dr_syed.png (provided)"
+        }
+    ],
+    "services": {
+        "full_list": [
+            "Checkups",
+            "Cosmetic Dentistry",
+            "Dental Bridges",
+            "Dental Crowns",
+            "Dental Implants",
+            "Dental Veneers",
+            "Dentures",
+            "Emergency Care",
+            "Fillings",
+            "Clear Aligners",
+            "Oral Surgery",
+            "Root Canal",
+            "Tooth Extraction"
+        ],
+        "priority_for_demand": [
+            "Emergency Dentistry",
+            "Dental Implants",
+            "Clear Aligners",
+            "Root Canal"
+        ]
+    },
+    "offers": [
+        {
+            "name": "$99 Cleaning + Exam + X-rays",
+            "notes": "Healthy gums; new patients only."
+        },
+        {
+            "name": "$49 Emergency Exam + X-ray",
+            "notes": "For urgent concerns."
+        }
+    ],
+    "messaging_preferences": {
+        "primary_cta": "Call Now",
+        "secondary_cta": "Book Online (Dentrix Ascend link)",
+        "emergency_statement": "Offer prompt emergency services to address immediate needs without overpromising guaranteed same-day."
+    },
+    "assets_status": {
+        "logo": "client to supply official files; sample images exist",
+        "headshots": [
+            "dr_shazad_alkurdi.png",
+            "dr_syed.png"
+        ],
+        "clinic_photos": "stock placeholders acceptable until client supplies new photos"
+    },
+    "platform_tech": {
+        "current_platform": "Wix (client wants to move off)",
+        "domain": "chromedentistry.com",
+        "hosting": "to be confirmed/migrated",
+        "access_needed": [
+            "Registrar/DNS",
+            "Current hosting/Wix",
+            "Email (forms)"
+        ]
+    },
+    "local_market_insights": {
+        "area": "Green Bay, Wisconsin",
+        "population_and_language_signals": {
+            "population_estimate": "≈106k–107k",
+            "notes": "City has meaningful Hispanic/Latino population (~18%), supporting Spanish language content; median age mid-30s.",
+            "sources": [
+                {
+                    "note": "DataUSA profile on Green Bay population/age/income",
+                    "url": "https://datausa.io/profile/geo/green-bay-wi"
+                },
+                {
+                    "note": "2020 census demographics (Hispanic ~17.9%)",
+                    "url": "https://en.wikipedia.org/wiki/Green_Bay%2C_Wisconsin"
+                }
+            ]
+        },
+        "competitor_snapshot_examples": [
+            {
+                "name": "Dental Studio 920",
+                "notes": [
+                    "Emergency page promises same-day/after-hours options; strong emergency positioning."
+                ],
+                "url": "https://www.dentalstudio920.com/services/emergency-dentistry"
+            },
+            {
+                "name": "Oral Health Associates",
+                "notes": [
+                    "24/7 emergency line messaging; comprehensive family/cosmetic positioning."
+                ],
+                "urls": [
+                    "https://www.ohadental.com/",
+                    "https://www.ohadental.com/https-www-ohadental-com-green-bay-dentists-reviews/dental-emergencies/"
+                ]
+            },
+            {
+                "name": "Bay Oral Surgery & Implant Center",
+                "notes": [
+                    "Implant specialization and education-focused pages; common local authority for implants."
+                ],
+                "urls": [
+                    "https://bayoralsurgery.com/",
+                    "https://bayoralsurgery.com/dental-implants/"
+                ]
+            },
+            {
+                "name": "Green Bay Periodontics & Implant Dentistry",
+                "notes": [
+                    "Implant and perio specialty positioning; clear phone and request appointment."
+                ],
+                "url": "https://www.greenbayperio.com/"
+            },
+            {
+                "name": "Allouez Family Dental",
+                "notes": [
+                    "Active content for emergency, implants, Invisalign; strong service pages & clear CTAs."
+                ],
+                "urls": [
+                    "https://allouezfamilydental.com/",
+                    "https://allouezfamilydental.com/services/dental-emergencies/",
+                    "https://allouezfamilydental.com/services/dental-implants/",
+                    "https://allouezfamilydental.com/services/invisalign/"
+                ]
+            },
+            {
+                "name": "Green Bay Family Dentistry",
+                "notes": [
+                    "Dedicated clear aligners content; address/phone prominent."
+                ],
+                "urls": [
+                    "https://www.gbfamilydentistry.com/",
+                    "https://www.gbfamilydentistry.com/clear-aligners"
+                ]
+            },
+            {
+                "name": "Dental Associates (Green Bay & Howard)",
+                "notes": [
+                    "Networked brand with emergency resource and direct location phones (map pack strength)."
+                ],
+                "url": "https://www.dentalassociates.com/patient-resources/emergency-dental-care"
+            }
+        ],
+        "observed_high-performers_common_patterns": [
+            "Dedicated emergency page; phrases like “same-day” or “call now” near fold; phone anchored in header.",
+            "Clear insurance/financing explainer (many highlight Medicaid or major PPOs).",
+            "Strong service detail pages for implants/aligners with FAQs and outcome language.",
+            "Prominent review count/ratings and easy path to schedule or call.",
+            "Google Business Profile (GBP) linked; consistent NAP across site/footer.",
+            "Multiple local category touchpoints (Dentist, Emergency Dental Service, Cosmetic Dentist, Dental Implants)."
+        ]
+    },
+    "seo_research_and_plan": {
+        "target_query_themes_high_intent_green_bay": [
+            "emergency dentist green bay",
+            "dentist near me",
+            "dental implants green bay",
+            "invisalign / clear aligners green bay",
+            "root canal green bay",
+            "medicaid dentist green bay"
+        ],
+        "why_these": "They align with competitor SERP presence and typical local dental demand; competitors actively build pages around these terms (see sources in competitor_snapshot_examples).",
+        "gbp_optimization": {
+            "core_actions": [
+                "Ensure categories include: Dentist (primary), Emergency dental service, Cosmetic dentist; add others as appropriate.",
+                "Add appointment URL (Dentrix), services list, hours, languages, insurance note (Medicaid/ForwardHealth), attributes (wheelchair access, etc.).",
+                "Upload high-quality photos (exterior, interior, team, treatment rooms); post updates for offers and emergencies.",
+                "Collect & respond to reviews; encourage keywords like 'emergency', 'implants', 'aligners', 'Medicaid'."
+            ]
+        },
+        "on_site_essentials": [
+            "Crystal-clear NAP in footer and contact; click-to-call.",
+            "Unique meta titles/descriptions with local modifiers (Green Bay, neighborhood cues).",
+            "Structured data: Dentist (LocalBusiness) on home; BreadcrumbList on inner pages; Review/Rating where applicable.",
+            "Fast load; responsive images; internal linking between related services; location cues near Lambeau/Oneida St.",
+            "Accessibility and multilingual content (English/Spanish/Arabic) to match service area."
+        ],
+        "content_opportunities_blog_or_faq": [
+            "What to do before your emergency visit (Green Bay patients)",
+            "Does ForwardHealth/BadgerCare cover X procedure?",
+            "Implants vs bridges: cost, durability, maintenance in Wisconsin",
+            "How clear aligners work and average timelines",
+            "Root canal pain myths & modern anesthesia"
+        ],
+        "citations_directories_priority": [
+            "Google Business Profile",
+            "Apple Maps, Bing Places",
+            "Healthgrades, Vitals",
+            "Yelp",
+            "Insurance directories (e.g., Delta Dental, UnitedHealthcare) matching accepted plans",
+            "Local chambers/associations"
+        ],
+        "useful_sources_for_context": [
+            {
+                "topic": "Emergency positioning (same-day/after-hours) locally",
+                "urls": [
+                    "https://www.dentalstudio920.com/services/emergency-dentistry",
+                    "https://www.ohadental.com/https-www-ohadental-com-green-bay-dentists-reviews/dental-emergencies/",
+                    "https://www.willowcovedental.com/same-day-dentistry"
+                ]
+            },
+            {
+                "topic": "Implants local authorities",
+                "urls": [
+                    "https://bayoralsurgery.com/dental-implants/",
+                    "https://www.greenbayperio.com/"
+                ]
+            },
+            {
+                "topic": "Aligners competitive presence",
+                "urls": [
+                    "https://www.gbfamilydental.com/mtm-clear-aligners-for-adults",
+                    "https://www.wilkeorthodontics.com/invisalign-treatment",
+                    "https://engageorthodontics.com/invisalign/"
+                ]
+            },
+            {
+                "topic": "Green Bay demographics context",
+                "urls": [
+                    "https://datausa.io/profile/geo/green-bay-wi",
+                    "https://en.wikipedia.org/wiki/Green_Bay%2C_Wisconsin"
+                ]
+            }
+        ]
+    }
+}
