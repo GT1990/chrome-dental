@@ -5,20 +5,13 @@ type HeroProps = {
   title: string;
   subline?: string;
   bookingHref?: string;
-  tagline?: string;
 };
 
-export default function Hero({
-  title,
-  subline,
-  bookingHref,
-  tagline = "Chrome Dental",
-}: HeroProps) {
+export default function Hero({ title, subline, bookingHref }: HeroProps) {
   return (
     <section className="hero section hero--home">
       <div className="container hero-inner">
         <div className="hero-copy">
-          {tagline ? <span className="hero-kicker">{tagline}</span> : null}
           <h1 className="hero-title">{title}</h1>
           {subline ? <p className="hero-subline">{subline}</p> : null}
           <div className="hero-actions">

@@ -11,14 +11,16 @@
   "dependencies": {
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-router-dom": "^6.26.2",
-    "react-helmet-async": "^2.0.5"
+    "react-helmet-async": "^2.0.5",
+    "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
+    "@types/node": "^24.10.1",
     "@types/react": "^18.3.8",
     "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
     "typescript": "^5.5.4",
-    "vite": "^5.4.8",
-    "@vitejs/plugin-react": "^4.3.1"
+    "vite": "^5.4.21",
+    "vite-plugin-glob": "^0.3.2"
   }
 }
