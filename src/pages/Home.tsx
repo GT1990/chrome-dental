@@ -1,5 +1,4 @@
 import Hero from "../components/Hero";
-import ValueProps from "../components/ValueProps";
 import ServicesGrid from "../components/ServicesGrid";
 import NewPatientsBanner from "../components/NewPatientsBanner";
 import InsuranceSection from "../components/InsuranceSection";
@@ -8,6 +7,7 @@ import DoctorsSection from "../components/DoctorsSection";
 import MapContact from "../components/MapContact";
 import { Seo } from "../seo/Seo";
 import { PRACTICE } from "../config";
+import SocialProofRibbon from "../components/SocialProofRibbon";
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
         subline="Cosmetic and Family Dentistry in Green Bay."
         bookingHref={PRACTICE.bookingUrl}
       />
-      <ValueProps />
+      <SocialProofRibbon />
       <ServicesGrid limit={5} showViewAll />
       <NewPatientsBanner />
       <InsuranceSection />

@@ -1,5 +1,6 @@
 import { PRACTICE } from "../config";
 import heroFamilyImg from "../img/stock/dental-chair-smile.png";
+import styles from "../css/Hero.module.css";
 
 type HeroProps = {
   title: string;
@@ -9,15 +10,15 @@ type HeroProps = {
 
 export default function Hero({ title, subline, bookingHref }: HeroProps) {
   return (
-    <section className="hero section hero--home">
-      <div className="container hero-inner">
-        <div className="hero-copy">
-          <h1 className="hero-title">{title}</h1>
-          {subline ? <p className="hero-subline">{subline}</p> : null}
-          <div className="hero-actions">
+    <section className={`${styles.hero}`}>
+      <div className={`container ${styles.heroInner}`}>
+        <div className={styles.heroLeft}>
+          <h1 className={styles.heroTitle}>{title}</h1>
+          {subline ? <p className={styles.heroSubline}>{subline}</p> : null}
+          <div className={styles.heroActions}>
             {bookingHref ? (
               <a
-                className="btn hero-btn hero-btn-primary"
+                className={`btn ${styles.heroBtn} ${styles.heroBtnPrimary}`}
                 href={bookingHref}
                 target="_blank"
                 rel="noopener"
@@ -26,19 +27,19 @@ export default function Hero({ title, subline, bookingHref }: HeroProps) {
               </a>
             ) : null}
             <a
-              className="btn hero-btn hero-btn-secondary"
+              className={`btn ${styles.heroBtn} ${styles.heroBtnSecondary}`}
               href={`tel:${PRACTICE.phone.replace(/[^\d]/g, "")}`}
             >
               {PRACTICE.phone}
             </a>
           </div>
         </div>
-        <div className="hero-visual" aria-hidden="true">
-          <div className="hero-visual-circle" />
+        <div className={styles.heroRight} aria-hidden="true">
+          <div className={styles.heroRightCircle} />
           <img
             src={heroFamilyImg}
             alt="Smiling family"
-            className="hero-photo"
+            className={styles.heroPhoto}
             loading="lazy"
           />
         </div>

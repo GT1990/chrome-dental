@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { PRACTICE } from "../config";
 import logo from "../img/chrome-dental-logo.svg";
+import styles from "../css/Header.module.css";
 
 export default function Header() {
   const [isSolid, setIsSolid] = useState(false);
@@ -129,23 +130,22 @@ export default function Header() {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className={`header ${isSolid || isMenuOpen ? "header-solid" : ""}`}>
-      <div className="container header-inner">
-        <Link
-          to="/"
-          className="brand"
-          style={{ display: "flex", alignItems: "center", gap: 12 }}
-          aria-label={PRACTICE.name}
-        >
+    <header
+      className={`${styles.header} ${
+        isSolid || isMenuOpen ? styles.headerSolid : ""
+      }`}
+    >
+      <div className={`container ${styles.headerInner}`}>
+        <Link to="/" className={styles.brand} aria-label={PRACTICE.name}>
           <img
             src={logo}
             alt={`${PRACTICE.name} logo`}
-            className="brand-logo"
+            className={styles.brandLogo}
             loading="lazy"
           />
         </Link>
         <button
-          className={`menu-toggle ${isMenuOpen ? "is-active" : ""}`}
+          className={`${styles.menuToggle}`}
           type="button"
           aria-label="Toggle navigation"
           aria-expanded={isMenuOpen}
@@ -153,7 +153,7 @@ export default function Header() {
         >
           {isMenuOpen ? (
             <svg
-              className="menu-close-icon"
+              className={styles.menuCloseIcon}
               viewBox="0 0 24 24"
               aria-hidden="true"
             >
@@ -174,10 +174,10 @@ export default function Header() {
           )}
         </button>
         <nav
-          className={`nav ${isMenuOpen ? "nav-open" : ""}`}
+          className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ""}`}
           aria-label="Main"
         >
-          <div className="nav-list">
+          <div className={styles.navList}>
             {navItems.map((item) =>
               item.href ? (
                 <a
@@ -185,25 +185,32 @@ export default function Header() {
                   href={item.href}
                   target="_blank"
                   rel="noopener"
-                  className={`nav-item nav-link ${item.variant === "cta" ? "nav-cta" : ""}`}
+                  className={`${styles.navItem} ${styles.navLink} ${
+                    item.variant === "cta" ? styles.navCta : ""
+                  }`}
                   onClick={closeMenu}
                 >
-                  <span className="nav-icon">{item.icon}</span>
-                  <span className="nav-label">{item.label}</span>
+                  <span className={styles.navIcon}>{item.icon}</span>
+                  <span className={styles.navLabel}>{item.label}</span>
                 </a>
               ) : (
                 <NavLink
                   key={item.label}
                   to={item.to!}
                   className={({ isActive }) =>
-                    `nav-item nav-link ${isActive ? "active" : ""} ${
-                      item.variant === "cta" ? "nav-cta" : ""
-                    }`
+                    [
+                      styles.navItem,
+                      styles.navLink,
+                      isActive ? styles.active : "",
+                      item.variant === "cta" ? styles.navCta : "",
+                    ]
+                      .filter(Boolean)
+                      .join(" ")
                   }
                   onClick={closeMenu}
                 >
-                  <span className="nav-icon">{item.icon}</span>
-                  <span className="nav-label">{item.label}</span>
+                  <span className={styles.navIcon}>{item.icon}</span>
+                  <span className={styles.navLabel}>{item.label}</span>
                 </NavLink>
               )
             )}

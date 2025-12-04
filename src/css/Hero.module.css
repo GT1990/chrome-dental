@@ -1,0 +1,325 @@
+.hero {
+  background: radial-gradient(
+      45rem 28rem at 65% 45%,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0) 60%
+    ),
+    linear-gradient(
+      135deg,
+      #1e5fd6 0%,
+      #3d86e8 35%,
+      #6fb1f6 60%,
+      #d9e9ff 85%,
+      #ffffff 100%
+    );
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+    background: radial-gradient(
+        45rem 28rem at 65% 45%,
+        rgba(96, 167, 255, 0.9) 0%,
+        rgba(255, 255, 255, 0) 60%
+      ),
+      linear-gradient(
+        135deg,
+        #1e5fd6 0%,
+        #3d86e8 50%,
+        #6fb1f6 75%,
+        #d9e9ff 100%
+      );
+  }
+}
+
+.heroInner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  width: 100%;
+}
+
+@media (max-width: 1250px) {
+  .heroInner {
+    padding: 110px 28px 120px;
+  }
+}
+
+@media (min-width: 768px) {
+  .heroInner {
+    flex-direction: row;
+  }
+}
+@media (max-width: 768px) {
+  .heroInner {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 150px;
+    height: 100%;
+    padding: 0 25px;
+  }
+}
+
+.heroLeft {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+@media (max-width: 768px) {
+  .heroLeft {
+    width: 100%;
+    height: 60%;
+  }
+}
+
+.heroLeft > * + * {
+  margin-top: 16px;
+}
+
+.heroKicker {
+  font-size: 13px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  display: inline-flex;
+  align-items: center;
+}
+
+.heroKicker::before,
+.heroKicker::after {
+  content: "•";
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.heroTitle {
+  font-family: Poppins, Inter, sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 70px;
+  margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+  .heroTitle {
+    font-family: Poppins, Inter, sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 55px;
+    margin-bottom: 15px;
+  }
+}
+
+.heroSubline {
+  font-size: 20px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 32ch;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .heroActions {
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+}
+
+.heroBtn {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 16px;
+  border: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease,
+    color 0.2s ease;
+}
+@media (max-width: 768px) {
+  .heroBtn {
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 16px;
+    border: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease,
+      color 0.2s ease;
+  }
+}
+
+.heroBtnPrimary {
+  background: linear-gradient(135deg, #0056ff 0%, #0c72ff 100%);
+  color: #fff;
+  box-shadow: 0 16px 32px rgba(0, 70, 190, 0.35);
+}
+
+.heroBtnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 34px rgba(0, 70, 190, 0.4);
+}
+
+.heroBtnSecondary {
+  background: linear-gradient(135deg, #ffffff 0%, #e7f1ff 100%);
+  color: #1c58a7;
+  border: 0;
+  box-shadow: 0 16px 32px rgba(15, 65, 160, 0.18);
+}
+
+.heroBtnSecondary:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #d7e8ff 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 20px 36px rgba(15, 65, 160, 0.22);
+}
+
+.heroActions .heroBtn {
+  margin-right: 12px;
+  margin-top: 12px;
+}
+
+.heroActions .heroBtn:last-child {
+  margin-right: 0;
+}
+
+.heroRight {
+  position: absolute;
+  right: -150px;
+  height: 75vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .heroRight {
+    position: relative;
+    right: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100vw;
+    height: 40%;
+    overflow: hidden;
+  }
+}
+
+.heroRightCircle {
+  position: absolute;
+  width: 90vh;
+  height: 90vh;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 48% 34%,
+    rgba(104, 176, 255, 0.4) 0%,
+    rgba(30, 101, 214, 0.76) 54%,
+    rgba(18, 63, 152, 0.92) 95%
+  );
+  filter: drop-shadow(0 42px 90px rgba(6, 41, 118, 0.48));
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -48%);
+  pointer-events: none;
+  opacity: 0.2;
+}
+@media (max-width: 768px) {
+  .heroRightCircle {
+    position: absolute;
+    width: 130vw;
+    height: 100vw;
+    top: 70%;
+    left: 55%;
+    transform: translate(-50%, -40%);
+    background: radial-gradient(
+      circle at 50% 30%,
+      rgba(140, 200, 255, 0.9) 0%,
+      rgba(70, 150, 235, 0.9) 54%,
+      rgba(40, 110, 210, 0.95) 95%
+    );
+    opacity: 0.32;
+  }
+}
+
+.heroPhoto {
+  position: relative;
+  height: 65vh;
+  object-fit: contain;
+  filter: drop-shadow(0 35px 60px rgba(12, 53, 136, 0.35));
+  z-index: 1;
+  align-self: flex-end;
+  margin-bottom: -15px;
+}
+@media (max-width: 768px) {
+  .heroPhoto {
+    position: relative;
+    height: 40vh;
+    margin-left: 50px;
+  }
+}
+
+/* @media (max-width: 900px) {
+  .hero {
+    max-height: none;
+  }
+
+  .heroInner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 120px 22px 110px;
+  }
+
+  .heroLeft {
+    align-items: center;
+    max-width: 620px;
+  }
+
+  .heroSubline {
+    text-align: center;
+    max-width: 28ch;
+  }
+
+  .heroActions {
+    justify-content: center;
+  }
+
+  .heroRight {
+    order: 2;
+    min-height: 320px;
+    width: 100%;
+    align-items: flex-end;
+  }
+
+  .heroRightCircle {
+    width: 520px;
+    height: 520px;
+    bottom: 0px;
+    transform: translate(-50%, -42%);
+  }
+
+  .heroPhoto {
+    height: 100%;
+    width: auto;
+    max-height: 420px;
+    max-width: 90vw;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+} */

@@ -1,0 +1,39 @@
+.grid {
+  row-gap: 20px;
+}
+
+.testimonialCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+
+.headerRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stars {
+  color: #ffd500;
+  font-size: 18px;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 1px #f59e0b;
+}
+
+.quote {
+  margin: 0;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.meta {
+  margin-top: auto;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.cta {
+  margin-top: 16px;
+}

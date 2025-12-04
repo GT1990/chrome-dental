@@ -1,0 +1,109 @@
+.wrapper {
+  width: 100%;
+  min-height: 25vh; /* Occupies the bottom 25% of the viewport */
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+  transform: translateY(-60px);
+  z-index: 10;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    transform: translateY(-10px);
+  }
+}
+.glassContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  width: 90vw;
+  max-width: 1200px;
+  padding: 24px 20px;
+
+  /* Glassmorphism Effect */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.85
+  ); /* Slightly more opaque for readability */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 15px 35px rgba(0, 70, 150, 0.15);
+  border-radius: 20px;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 200px; /* Helps keep layout stable during animation */
+}
+
+@media (max-width: 768px) {
+  .statItem {
+    height: 100px;
+  }
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNumber {
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums; /* Prevents jitter during counting animation */
+}
+
+.statLabel {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 4px;
+}
+
+.divider {
+  width: 1px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .wrapper {
+    height: auto;
+    margin-top: -30px;
+    padding-bottom: 40px;
+  }
+
+  .glassContainer {
+    flex-direction: column;
+    gap: 24px;
+    padding: 30px;
+    align-items: flex-start;
+  }
+
+  .divider {
+    display: none; /* Hide dividers on mobile for cleaner look */
+  }
+
+  .statItem {
+    width: 100%;
+    min-width: auto;
+  }
+}

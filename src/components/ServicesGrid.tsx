@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import styles from "../css/ServicesGrid.module.css";
 
 const serviceImages = import.meta.glob("../img/services/*.png", {
   eager: true,
@@ -103,7 +104,9 @@ export default function ServicesGrid({
   showViewAll = false,
 }: ServicesGridProps) {
   const displayedServices =
-    typeof limit === "number" ? services.slice(0, Math.max(limit, 0)) : services;
+    typeof limit === "number"
+      ? services.slice(0, Math.max(limit, 0))
+      : services;
   const shouldShowViewAll =
     showViewAll && displayedServices.length < services.length;
 
@@ -116,40 +119,40 @@ export default function ServicesGrid({
             <Link
               key={s.slug}
               to={`/services/${s.slug}`}
-              className="card service-card"
+              className={`card ${styles.serviceCard}`}
               style={{ textDecoration: "none", color: "inherit" }}
             >
-              <div className="icon service-icon-wrapper">
+              <div className={`${styles.icon} ${styles.serviceIconWrapper}`}>
                 {s.image ? (
                   <img
                     src={s.image}
                     alt=""
-                    className="service-icon"
+                    className={styles.serviceIcon}
                     loading="lazy"
                   />
                 ) : null}
               </div>
-              <div className="service-name" style={{ fontWeight: 600 }}>
+              <div className={styles.serviceName} style={{ fontWeight: 600 }}>
                 {s.name}
               </div>
-              <p className="muted learn-more">Learn more</p>
+              <p className={`muted ${styles.learnMore}`}>Learn more</p>
             </Link>
           ))}
           {shouldShowViewAll ? (
             <Link
               to="/services"
-              className="card view-all-card service-card"
+              className={`card ${styles.serviceCard} ${styles.viewAllCard}`}
               style={{ textDecoration: "none", color: "inherit" }}
             >
-              <div className="icon service-icon-wrapper">
+              <div className={`${styles.icon} ${styles.serviceIconWrapper}`}>
                 <img
                   src={serviceImages["../img/services/all-services.png"]}
                   alt=""
-                  className="service-icon"
+                  className={styles.serviceIcon}
                   loading="lazy"
                 />
               </div>
-              <div className="service-name" style={{ fontWeight: 600 }}>
+              <div className={styles.serviceName} style={{ fontWeight: 600 }}>
                 View All Services
               </div>
             </Link>
