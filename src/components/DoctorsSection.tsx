@@ -1,36 +1,43 @@
 import React from "react";
-// Make sure to adjust these paths if your folder structure changes
-import drShazadImg from "../img/doctors/dr_shazad_alkurdi.png";
-import drSyedImg from "../img/doctors/dr_syed.png";
+// Standard imports usually provide the path string directly in Vite/Create-React-App
+import drHussamJaberImg from "../img/doctors/dr-hussam-jaber.webp";
+import drGauravSoodImg from "../img/doctors/dr-gaurav-sood.png";
 import styles from "../css/DoctorsSection.module.css";
 
 type Doctor = {
   name: string;
-  role: string;
-  photo: string;
+  tagline: string;
+  photo: string; // In standard React imports, this is usually just a string path
+  bioLink: string;
 };
 
 export default function DoctorsSection() {
   const docs = [
     {
-      name: "Dr. Shazad Alkurdi",
-      role: "Cosmetic & General Dentistry",
-      photo: drShazadImg,
+      name: "Dr. Hussam Jaber",
+      tagline:
+        "Exceptional, patient-focused care grounded in advanced clinical expertise.",
+      photo: drHussamJaberImg,
+      bioLink: "/doctors/hussam-jaber.html", // .html extension if hosting static files
     },
-    { name: "Dr. Syed", role: "General Dentistry", photo: drSyedImg },
+    {
+      name: "Dr. Gaurav Sood",
+      tagline:
+        "Exceptional, patient-focused care delivered with skill, precision, and comfort.",
+      photo: drGauravSoodImg,
+      bioLink: "/doctors/gaurav-sood.html",
+    },
   ] satisfies Doctor[];
 
   return (
     <section className="section">
       <div className="container stack">
-        {/* Header kept as requested */}
         <h3 className="section-title">Meet the Doctors</h3>
 
-        {/* Grid layout using local module class for the grid structure if needed, 
-            or relying on your global 'grid' class. I added a local class to be safe. */}
-        <div className={`grid grid-2 ${styles.doctorsGrid}`}>
+        <div className={styles.doctorsGrid}>
           {docs.map((d, i) => (
             <div key={i} className={styles.doctorCard}>
+              {/* Image Area */}
               <div className={styles.imageWrapper}>
                 <img
                   src={d.photo}
@@ -39,9 +46,16 @@ export default function DoctorsSection() {
                   loading="lazy"
                 />
               </div>
+
+              {/* Content Area */}
               <div className={styles.infoWrapper}>
                 <div className={styles.doctorName}>{d.name}</div>
-                <div className={`muted ${styles.doctorRole}`}>{d.role}</div>
+                <div className={styles.doctorRole}>{d.tagline}</div>
+
+                {/* Standard HTML Link */}
+                <a href={d.bioLink} className={styles.learnMoreLink}>
+                  Learn More <span className={styles.arrow}>→</span>
+                </a>
               </div>
             </div>
           ))}

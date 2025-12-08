@@ -2,8 +2,8 @@
   width: 48px;
   height: 48px;
   border-radius: 14px;
-  background: #e8f1ff;
-  border: 1px solid #cfe0ff;
+  background: var(--color-service-accent);
+  border: 1px solid var(--color-service-accent-border);
   margin-bottom: 12px;
   display: flex;
   align-items: center;
@@ -15,8 +15,8 @@
   width: 100px;
   height: 100px;
   border-radius: 24px;
-  background: #e8f1ff;
-  border: 1px solid #cfe0ff;
+  background: var(--color-service-accent);
+  border: 1px solid var(--color-service-accent-border);
   margin-bottom: 12px;
   display: flex;
   align-items: center;
@@ -39,7 +39,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: #0f172a;
+  color: var(--color-text);
   border: 1px solid var(--chrome-200);
   transition: background-color 0.2s ease, color 0.2s ease,
     border-color 0.2s ease, box-shadow 0.2s ease;
@@ -54,24 +54,24 @@
   font-size: 14px;
   position: absolute;
   bottom: 0px;
-  color: #fff;
+  color: var(--color-surface);
 }
 
 .serviceCard:hover,
 .serviceCard:focus-visible {
   background: var(--primary-700);
   border-color: var(--primary-700);
-  box-shadow: 0 12px 28px rgba(21, 92, 192, 0.25);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.26);
 }
 
 .serviceCard:hover :global(.muted),
 .serviceCard:focus-visible :global(.muted) {
-  color: #fff;
+  color: var(--color-surface);
 }
 
 .serviceCard:hover .learnMore,
 .serviceCard:focus-visible .learnMore {
-  color: #fff;
+  color: var(--color-surface);
 }
 
 .serviceCard:hover .serviceIconWrapper,
@@ -87,7 +87,7 @@
 
 .serviceCard:hover .serviceName,
 .serviceCard:focus-visible .serviceName {
-  color: #fff;
+  color: var(--color-surface);
 }
 
 .viewAllCard {
@@ -95,8 +95,8 @@
 }
 
 .viewAllCard .serviceIconWrapper {
-  background: #fff5d1;
-  border-color: #ffe08a;
+  background: var(--color-viewall-bg);
+  border-color: var(--color-viewall-border);
 }
 
 .viewAllCard:hover .serviceIconWrapper,
@@ -107,9 +107,9 @@
 
 .viewAllCard:hover,
 .viewAllCard:focus-visible {
-  background: #ffe082;
-  color: #000;
-  border-color: #ffe082;
+  background: var(--color-viewall-cta);
+  color: var(--color-black);
+  border-color: var(--color-viewall-cta);
   box-shadow: 0 12px 28px rgba(15, 23, 42, 0.3);
 }
 
@@ -120,7 +120,7 @@
 
 .viewAllCard:hover .serviceName,
 .viewAllCard:focus-visible .serviceName {
-  color: #000;
+  color: var(--color-black);
 }
 
 @media (max-width: 768px) {
@@ -151,7 +151,7 @@
   .learnMore {
     position: static;
     margin: 4px 0 0 0;
-    color: #64748b;
+    color: var(--color-subtext);
     display: none;
   }
 }

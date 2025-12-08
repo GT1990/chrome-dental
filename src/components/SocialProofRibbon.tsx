@@ -70,9 +70,14 @@ const SocialProofRibbon: React.FC = () => {
             </svg>
           </div>
           <div className={styles.textGroup}>
-            <span className={styles.statNumber}>Most Insurances Accepted</span>
-            <span className={styles.statLabel}>
-              Including Medicaid / Forward Health
+            <span className={styles.statNumber}>
+              Almost All Insurances Accepted
+            </span>
+            <span
+              className={styles.badgeHighlight}
+              aria-label="Including Medicaid and BadgerCare"
+            >
+              Including Medicaid / BadgerCare
             </span>
           </div>
         </div>

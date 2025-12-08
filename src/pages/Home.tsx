@@ -17,7 +17,8 @@ export default function Home() {
         description="Compassionate, modern dental care for families in Green Bay. Prompt emergency appointments. ForwardHealth (Medicaid) & most insurances accepted."
       />
       <Hero
-        title="Exceptional Care for Your Smile"
+        titleL1="Exceptional Care"
+        titleL2="for Your Smile"
         subline="Cosmetic and Family Dentistry in Green Bay."
         bookingHref={PRACTICE.bookingUrl}
       />

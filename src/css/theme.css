@@ -1,0 +1,60 @@
+:root {
+  --color-primary-500: #2b2b2b;
+  --color-primary-600: #1f1f1f;
+  --color-primary-650: #111111;
+  --color-primary-650-hover: #000000;
+
+  --color-bg-50: #f7f8fa;
+  --color-bg-100: #eef1f5;
+  --color-bg-200: #dfe5eb;
+
+  --color-text: #0f172a;
+  --color-muted: #475569;
+  --color-surface: #ffffff;
+
+  --color-badge-bg: #fff8d6;
+  --color-badge-text: #6f5200;
+  --color-badge-border: #ffe08a;
+
+  --color-star: #ffd500;
+  --color-quote: #334155;
+  --color-subtext: #64748b;
+
+  --color-hero-1: #000000;
+  --color-hero-2: #181818;
+  --color-hero-3: #2a2a2a;
+  --color-hero-4: #5a5a5a;
+
+  --color-cta-primary-start: #ffd43b;
+  --color-cta-primary-end: #ffd43b;
+  --color-cta-secondary-start: rgb(0, 0, 0, 0.95);
+  --color-cta-secondary-end: rgb(0, 0, 0, 0.6);
+  --color-cta-text: #000000;
+  --color-cta-glow: rgba(255, 193, 7, 0.5);
+  --color-cta-secondary-hover: #ffe89a;
+
+  --color-doctor-card-bg: #f1f5f9;
+  --color-doctor-text: #1a202c;
+
+  --color-header-gradient-start: #ffd43b;
+  --color-header-gradient-end: #f4c430;
+  --color-header-border: #2b2b2b;
+
+  --color-dark: #1a1a1a;
+  --color-dark-muted: #555555;
+
+  --color-service-accent: #fff8dc;
+  --color-service-accent-border: #ffe08a;
+  --color-viewall-bg: #fff5d1;
+  --color-viewall-border: #ffe08a;
+  --color-viewall-cta: #ffe082;
+
+  --color-black: #000000;
+
+  /* Legacy aliases */
+  --primary-600: var(--color-primary-500);
+  --primary-700: var(--color-primary-600);
+  --chrome-50: var(--color-bg-50);
+  --chrome-100: var(--color-bg-100);
+  --chrome-200: var(--color-bg-200);
+}

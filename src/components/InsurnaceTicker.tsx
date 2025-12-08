@@ -7,32 +7,33 @@ interface InsuranceTickerProps {
   speed?: number;
 }
 
-// --- Image Data ---
+const BASE_URL = import.meta.env.BASE_URL;
+
 const INSURANCE_LOGOS = [
-  "/img/insurance/aarp.png",
-  "/img/insurance/aetna.png",
-  "/img/insurance/ameritas.jpeg",
-  "/img/insurance/assurant.webp",
-  "/img/insurance/athemBlueCross.jpeg",
-  "/img/insurance/care-credit.png",
-  "/img/insurance/careington.png",
-  "/img/insurance/cigna.png",
-  "/img/insurance/delta-dental.png",
-  "/img/insurance/dha.jpg",
-  "/img/insurance/encore-dental.jpeg",
-  "/img/insurance/forward-health.png",
-  "/img/insurance/geha.png",
-  "/img/insurance/guardian.png",
-  "/img/insurance/metlife.png",
-  "/img/insurance/molina.jpeg",
-  "/img/insurance/premier-dental-group.webp",
-  "/img/insurance/principal.png",
-  "/img/insurance/renaissance.jpeg",
-  "/img/insurance/scion.png",
-  "/img/insurance/sunbit.webp",
-  "/img/insurance/umr.gif",
-  "/img/insurance/united-healthcare.webp",
-  "/img/insurance/wea.jpeg",
+  `${BASE_URL}img/insurance/aarp.png`,
+  `${BASE_URL}img/insurance/aetna.png`,
+  `${BASE_URL}img/insurance/ameritas.jpeg`,
+  `${BASE_URL}img/insurance/assurant.webp`,
+  `${BASE_URL}img/insurance/athemBlueCross.jpeg`,
+  `${BASE_URL}img/insurance/care-credit.png`,
+  `${BASE_URL}img/insurance/careington.png`,
+  `${BASE_URL}img/insurance/cigna.png`,
+  `${BASE_URL}img/insurance/delta-dental.png`,
+  `${BASE_URL}img/insurance/dha.jpg`,
+  `${BASE_URL}img/insurance/encore-dental.jpeg`,
+  `${BASE_URL}img/insurance/forward-health.png`,
+  `${BASE_URL}img/insurance/geha.png`,
+  `${BASE_URL}img/insurance/guardian.png`,
+  `${BASE_URL}img/insurance/metlife.png`,
+  `${BASE_URL}img/insurance/molina.jpeg`,
+  `${BASE_URL}img/insurance/premier-dental-group.webp`,
+  `${BASE_URL}img/insurance/principal.png`,
+  `${BASE_URL}img/insurance/renaissance.jpeg`,
+  `${BASE_URL}img/insurance/scion.png`,
+  `${BASE_URL}img/insurance/sunbit.webp`,
+  `${BASE_URL}img/insurance/umr.gif`,
+  `${BASE_URL}img/insurance/united-healthcare.webp`,
+  `${BASE_URL}img/insurance/wea.jpeg`,
 ];
 
 export default function InsuranceTicker({ speed = 40 }: InsuranceTickerProps) {

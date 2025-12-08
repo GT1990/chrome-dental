@@ -16,22 +16,22 @@
 }
 
 .stars {
-  color: #ffd500;
+  color: var(--color-star);
   font-size: 18px;
   letter-spacing: 1px;
-  -webkit-text-stroke: 1px #f59e0b;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.22);
 }
 
 .quote {
   margin: 0;
-  color: #334155;
+  color: var(--color-quote);
   line-height: 1.6;
 }
 
 .meta {
   margin-top: auto;
   font-size: 13px;
-  color: #64748b;
+  color: var(--color-subtext);
 }
 
 .cta {

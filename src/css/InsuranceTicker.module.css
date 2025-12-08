@@ -3,7 +3,7 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 3rem 0;
-  background-color: #ffffff;
+  background-color: var(--color-surface);
   overflow: hidden;
   font-family: inherit;
   position: relative;

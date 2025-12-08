@@ -1,46 +1,53 @@
 /* Grid Layout */
 .doctorsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
   width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-/* Card Container - Switched to Vertical Layout */
+/* Card Container */
 .doctorCard {
   display: flex;
-  flex-direction: column; /* Stacks image on top of text */
-  align-items: center;
-  background: #ffffff; /* White card */
-  border-radius: 12px;
-  overflow: hidden; /* Keeps image inside rounded corners */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); /* Soft, modern shadow */
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding-bottom: 24px; /* Space at the bottom for text */
-  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .doctorCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
 /* Image Container */
 .imageWrapper {
   width: 100%;
-  height: 320px; /* Taller, portrait height */
-  background: var(--chrome-200, #f1f5f9);
-  margin-bottom: 16px;
+  height: 350px; /* Fixed height is important for consistency */
   position: relative;
+  overflow: hidden;
+  background-color: #f0f4f8; /* Temporary loading color */
 }
 
 /* The Image itself */
 .doctorImg {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Changed from cover to contain to fit the whole image */
-  object-position: center; /* Changed from top center to center */
+  /* COVER is the key here: it fills the box completely */
+  object-fit: cover;
+  /* Top alignment prevents cutting off heads */
+  object-position: top center;
   display: block;
+  transition: transform 0.5s ease;
+}
+
+.doctorCard:hover .doctorImg {
+  transform: scale(1.05); /* Subtle zoom on hover */
 }
 
 /* Text Container */
@@ -48,25 +55,50 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 20px;
-  width: 100%;
+  padding: 24px 24px 32px 24px;
+  flex-grow: 1;
+  text-align: center;
 }
 
 /* Name Typography */
 .doctorName {
-  font-weight: 700;
-  font-size: 1.25rem; /* Larger font for vertical card */
-  color: var(--chrome-900, #1a202c);
-  margin-bottom: 4px;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #111827;
+  margin-bottom: 8px;
 }
 
 /* Role Typography */
 .doctorRole {
   font-size: 0.95rem;
-  color: #64748b; /* Slate-500 equivalent */
-  font-weight: 500;
+  line-height: 1.5;
+  color: #6b7280;
+  font-weight: 400;
+  margin-bottom: 24px;
 }
 
-.readMoreBtn {
-  margin-top: 32px;
+/* Link Styling */
+.learnMoreLink {
+  margin-top: auto;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2563eb; /* Dental blue */
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s ease, opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.arrow {
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+.learnMoreLink:hover {
+  opacity: 0.8;
+  gap: 10px;
 }

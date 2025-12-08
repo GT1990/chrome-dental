@@ -1,0 +1,38 @@
+.banner {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 24px;
+  background: #000;
+  color: #fff;
+  border: 1px solid #ffd43b;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.35);
+}
+
+.title {
+  color: #fff;
+}
+
+.copy {
+  opacity: 0.9;
+  margin: 4px 0 0 0;
+}
+
+.cta {
+  background: linear-gradient(
+    135deg,
+    var(--color-cta-primary-start) 0%,
+    var(--color-cta-primary-end) 100%
+  );
+  color: var(--color-cta-text);
+  border: 1px solid var(--color-cta-primary-end);
+  box-shadow: 0 10px 22px var(--color-cta-glow);
+}
+
+.cta:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px var(--color-cta-glow);
+}
