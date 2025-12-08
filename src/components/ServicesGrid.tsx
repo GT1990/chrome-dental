@@ -31,7 +31,7 @@ const services: Service[] = [
   {
     slug: "clear-aligners",
     name: "Clear Aligners",
-    image: serviceImages["../img/services/alignersIcon"],
+    image: serviceImages["../img/services/alignersIcon.png"],
   },
   {
     slug: "root-canal",
