@@ -16,16 +16,12 @@ const services: Service[] = [
   {
     slug: "emergency-dentistry",
     name: "Emergency Dentistry",
-    image:
-      serviceImages["../img/services/emergency-dentistry.png"] ??
-      serviceImages["../img/services/prevent.png"],
+    image: serviceImages["../img/services/emergency-services.png"],
   },
   {
     slug: "dental-implants",
     name: "Dental Implants",
-    image:
-      serviceImages["../img/services/dental-implants.png"] ??
-      serviceImages["../img/services/prevent.png"],
+    image: serviceImages["../img/services/dentalImplantIcon.png"],
   },
   {
     slug: "dental-bridges",
@@ -35,9 +31,7 @@ const services: Service[] = [
   {
     slug: "clear-aligners",
     name: "Clear Aligners",
-    image:
-      serviceImages["../img/services/clear-aligners.png"] ??
-      serviceImages["../img/services/checkups.png"],
+    image: serviceImages["../img/services/alignersIcon"],
   },
   {
     slug: "root-canal",
@@ -52,16 +46,12 @@ const services: Service[] = [
   {
     slug: "dental-crowns",
     name: "Dental Crowns",
-    image:
-      serviceImages["../img/services/dental-crowns.png"] ??
-      serviceImages["../img/services/dental-veneer.png"],
+    image: serviceImages["../img/services/crownIcon.png"],
   },
   {
     slug: "dental-veneers",
     name: "Dental Veneers",
-    image:
-      serviceImages["../img/services/dental-veneers.png"] ??
-      serviceImages["../img/services/dental-veneer.png"],
+    image: serviceImages["../img/services/dental-veneers.png"],
   },
   {
     slug: "tooth-extraction",
@@ -81,16 +71,12 @@ const services: Service[] = [
   {
     slug: "dentures",
     name: "Dentures",
-    image:
-      serviceImages["../img/services/dentures.png"] ??
-      serviceImages["../img/services/prevent.png"],
+    image: serviceImages["../img/services/dentureIcon.png"],
   },
   {
     slug: "oral-surgery",
     name: "Oral Surgery",
-    image:
-      serviceImages["../img/services/oral-surgery.png"] ??
-      serviceImages["../img/services/oral-surgen.png"],
+    image: serviceImages["../img/services/oral-surgen.png"],
   },
 ];
 
