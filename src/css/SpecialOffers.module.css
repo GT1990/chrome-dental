@@ -1,0 +1,115 @@
+/* SpecialOffers.module.css */
+
+.section {
+  background-color: #e5e5e5; /* Light gray background */
+  padding: 4rem 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 3rem;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #1a1a1a; /* Dark card background */
+  color: #ffffff;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  flex: 1;
+  min-width: 300px;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.price {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  color: #f1f1f1;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+  color: #f1f1f1;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 auto 0; /* 'auto' pushes the bottom content down */
+  width: 100%;
+}
+
+.featureItem {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Aligns dot with top of multi-line text */
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #e5e5e5;
+  line-height: 1.5;
+}
+
+/* Custom Yellow Bullet Point */
+.featureItem::before {
+  content: "•";
+  color: #fbbf24; /* Match button color */
+  font-size: 1.5rem;
+  line-height: 1rem; /* Adjust to align with text */
+  margin-right: 0.75rem;
+  margin-top: 0.1rem; /* Micro-adjustment for alignment */
+}
+
+.disclaimer {
+  font-style: italic;
+  color: #9ca3af; /* Muted gray text */
+  font-size: 0.875rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  min-height: 1.5em; /* Keeps buttons aligned even if text is missing */
+}
+
+.button {
+  background-color: #fbbf24; /* Golden yellow */
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #f59e0b; /* Slightly darker yellow on hover */
+}

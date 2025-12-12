@@ -2,7 +2,7 @@
 .doctorsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2.5rem;
+  gap: 5rem;
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
@@ -28,7 +28,7 @@
 /* Image Container */
 .imageWrapper {
   width: 100%;
-  height: 350px; /* Fixed height is important for consistency */
+  height: 450px; /* Fixed height is important for consistency */
   position: relative;
   overflow: hidden;
   background-color: #f0f4f8; /* Temporary loading color */
@@ -75,6 +75,8 @@
   color: #6b7280;
   font-weight: 400;
   margin-bottom: 24px;
+  text-align: left;
+  text-indent: 25px;
 }
 
 /* Link Styling */

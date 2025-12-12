@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { PRACTICE } from "../config";
 import { Seo } from "../seo/Seo";
+import PageHeader from "../components/PageHeader";
+import servicesIcon from "../img/services/all-services.png";
 
 export default function BookingEmbed() {
   const [blocked, setBlocked] = useState(false);
@@ -18,40 +20,47 @@ export default function BookingEmbed() {
   }, []);
 
   return (
-    <div className="section">
+    <>
       <Seo title="Book an Appointment | Chrome Dental" />
-      <div className="container stack">
-        <h1 className="section-title">Book an Appointment</h1>
-        {!blocked && (
-          <iframe
-            ref={iframeRef}
-            style={{
-              width: "100%",
-              height: "70vh",
-              border: "1px solid var(--chrome-200)",
-              borderRadius: "16px",
-            }}
-            src={PRACTICE.bookingUrl}
-            sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
-          />
-        )}
-        {blocked && (
-          <div className="card">
-            <p>
-              The booking system needs to open in a new tab for security
-              reasons.
-            </p>
-            <a
-              className="btn btn-primary"
-              href={PRACTICE.bookingUrl}
-              target="_blank"
-              rel="noopener"
-            >
-              Open Booking in New Tab
-            </a>
-          </div>
-        )}
-      </div>
-    </div>
+      <PageHeader
+        title="Book an Appointment"
+        icon={servicesIcon}
+        description="Reserve your visit through our online scheduling portal."
+        variant="service"
+      />
+      <section className="section">
+        <div className="container stack">
+          {!blocked && (
+            <iframe
+              ref={iframeRef}
+              style={{
+                width: "100%",
+                height: "70vh",
+                border: "1px solid var(--chrome-200)",
+                borderRadius: "16px",
+              }}
+              src={PRACTICE.bookingUrl}
+              sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
+            />
+          )}
+          {blocked && (
+            <div className="card">
+              <p>
+                The booking system needs to open in a new tab for security
+                reasons.
+              </p>
+              <a
+                className="btn btn-primary"
+                href={PRACTICE.bookingUrl}
+                target="_blank"
+                rel="noopener"
+              >
+                Open Booking in New Tab
+              </a>
+            </div>
+          )}
+        </div>
+      </section>
+    </>
   );
 }

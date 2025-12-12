@@ -15,9 +15,26 @@
   color: #fff;
 }
 
+.muted {
+  margin-bottom: 24px;
+}
 .copy {
   opacity: 0.9;
   margin: 4px 0 0 0;
+  font-size: 1.25rem;
+}
+
+.centerContent {
+  text-align: center;
+  width: 100%;
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+  justify-content: center;
 }
 
 .cta {
@@ -35,4 +52,41 @@
   filter: brightness(1.05);
   transform: translateY(-1px);
   box-shadow: 0 12px 24px var(--color-cta-glow);
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  min-width: 180px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+  border: 1px solid transparent;
+}
+
+.ctaPrimary {
+  background: linear-gradient(
+    135deg,
+    var(--color-cta-primary-start) 0%,
+    var(--color-cta-primary-end) 100%
+  );
+  color: var(--color-cta-text);
+  border-color: var(--color-cta-primary-end);
+  box-shadow: 0 10px 22px var(--color-cta-glow);
+}
+
+.ctaSecondary {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: #e2e8f0;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+}
+
+.ctaButton:hover,
+.ctaButton:focus-visible {
+  transform: translateY(-1px);
+  filter: brightness(1.02);
 }

@@ -1,13 +1,12 @@
 import Hero from "../components/Hero";
 import ServicesGrid from "../components/ServicesGrid";
-import NewPatientsBanner from "../components/NewPatientsBanner";
 import InsuranceSection from "../components/InsuranceSection";
 import Testimonials from "../components/Testimonials";
 import DoctorsSection from "../components/DoctorsSection";
-import MapContact from "../components/MapContact";
 import { Seo } from "../seo/Seo";
 import { PRACTICE } from "../config";
 import SocialProofRibbon from "../components/SocialProofRibbon";
+import ExclusiveNewPatientBanner from "../components/ExclusiveNewPatientBanner";
 
 export default function Home() {
   return (
@@ -24,11 +23,10 @@ export default function Home() {
       />
       <SocialProofRibbon />
       <ServicesGrid limit={5} showViewAll />
-      <NewPatientsBanner />
       <InsuranceSection />
       <Testimonials />
+      <ExclusiveNewPatientBanner />
       <DoctorsSection />
-      <MapContact />
     </>
   );
 }

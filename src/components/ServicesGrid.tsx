@@ -6,16 +6,16 @@ const serviceImages = import.meta.glob("../img/services/*.png", {
   import: "default",
 }) as Record<string, string>;
 
-type Service = {
+export type Service = {
   slug: string;
   name: string;
   image?: string;
 };
 
-const services: Service[] = [
+export const services: Service[] = [
   {
-    slug: "emergency-dentistry",
-    name: "Emergency Dentistry",
+    slug: "emergency-care",
+    name: "Emergency Care",
     image: serviceImages["../img/services/emergency-services.png"],
   },
   {
@@ -29,8 +29,8 @@ const services: Service[] = [
     image: serviceImages["../img/services/dental-bridges.png"],
   },
   {
-    slug: "clear-aligners",
-    name: "Clear Aligners",
+    slug: "aligners",
+    name: "Aligners",
     image: serviceImages["../img/services/alignersIcon.png"],
   },
   {
@@ -51,7 +51,7 @@ const services: Service[] = [
   {
     slug: "dental-veneers",
     name: "Dental Veneers",
-    image: serviceImages["../img/services/dental-veneers.png"],
+    image: serviceImages["../img/services/dental-veneer.png"],
   },
   {
     slug: "tooth-extraction",
@@ -83,11 +83,15 @@ const services: Service[] = [
 type ServicesGridProps = {
   limit?: number;
   showViewAll?: boolean;
+  stackCta?: boolean;
+  variant?: "default" | "servicesPage";
 };
 
 export default function ServicesGrid({
   limit,
   showViewAll = false,
+  stackCta = false,
+  variant = "default",
 }: ServicesGridProps) {
   const displayedServices =
     typeof limit === "number"
@@ -96,53 +100,105 @@ export default function ServicesGrid({
   const shouldShowViewAll =
     showViewAll && displayedServices.length < services.length;
 
+  const wrapperClass =
+    variant === "servicesPage"
+      ? styles.servicesBackgroundLight
+      : styles.servicesBackground;
+
   return (
     <section className="section">
-      <div className="container stack">
-        <h2 className="section-title">Services</h2>
-        <div className="grid grid-responsive">
-          {displayedServices.map((s) => (
-            <Link
-              key={s.slug}
-              to={`/services/${s.slug}`}
-              className={`card ${styles.serviceCard}`}
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              <div className={`${styles.icon} ${styles.serviceIconWrapper}`}>
-                {s.image ? (
+      <div className={wrapperClass}>
+        <div className="container stack">
+          {variant === "servicesPage" ? null : (
+            <h2 className="section-title">Services</h2>
+          )}
+          <div
+            className={`grid grid-responsive ${
+              variant === "servicesPage" ? styles.servicesPageGrid : ""
+            }`}
+          >
+          {displayedServices.map((s) =>
+            stackCta ? (
+              <Link
+                key={s.slug}
+                to={`/services/${s.slug}`}
+                className={`card ${styles.serviceCard} ${styles.stackCard} ${
+                  variant === "servicesPage" ? styles.serviceCardDark : ""
+                }`}
+                style={{ textDecoration: "none", color: "inherit" }}
+                aria-label={`Learn more about ${s.name}`}
+              >
+                <div className={styles.cardBody}>
+                  <div
+                    className={`${styles.icon} ${styles.serviceIconWrapper} ${
+                      variant === "servicesPage" ? styles.serviceIconWrapperLight : ""
+                    }`}
+                  >
+                    {s.image ? (
+                      <img
+                        src={s.image}
+                        alt=""
+                        className={styles.serviceIcon}
+                        loading="lazy"
+                      />
+                    ) : null}
+                  </div>
+                  <div className={styles.serviceName} style={{ fontWeight: 600 }}>
+                    {s.name}
+                  </div>
+                </div>
+                <span className={styles.learnMoreButton}>Learn More</span>
+              </Link>
+            ) : (
+              <Link
+                key={s.slug}
+                to={`/services/${s.slug}`}
+                className={`card ${styles.serviceCard} ${
+                  variant === "servicesPage" ? styles.serviceCardDark : ""
+                }`}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <div
+                  className={`${styles.icon} ${styles.serviceIconWrapper} ${
+                    variant === "servicesPage" ? styles.serviceIconWrapperLight : ""
+                  }`}
+                >
+                  {s.image ? (
+                    <img
+                      src={s.image}
+                      alt=""
+                      className={styles.serviceIcon}
+                      loading="lazy"
+                    />
+                  ) : null}
+                </div>
+                <div className={styles.serviceName} style={{ fontWeight: 600 }}>
+                  {s.name}
+                </div>
+                <p className={`muted ${styles.learnMore}`}>Learn more</p>
+              </Link>
+            )
+          )}
+            {shouldShowViewAll ? (
+              <Link
+                to="/services"
+                className={`card ${styles.serviceCard} ${styles.viewAllCard}`}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <div className={`${styles.icon} ${styles.serviceIconWrapper}`}>
                   <img
-                    src={s.image}
+                    src={serviceImages["../img/services/all-services.png"]}
                     alt=""
                     className={styles.serviceIcon}
                     loading="lazy"
                   />
-                ) : null}
-              </div>
-              <div className={styles.serviceName} style={{ fontWeight: 600 }}>
-                {s.name}
-              </div>
-              <p className={`muted ${styles.learnMore}`}>Learn more</p>
-            </Link>
-          ))}
-          {shouldShowViewAll ? (
-            <Link
-              to="/services"
-              className={`card ${styles.serviceCard} ${styles.viewAllCard}`}
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              <div className={`${styles.icon} ${styles.serviceIconWrapper}`}>
-                <img
-                  src={serviceImages["../img/services/all-services.png"]}
-                  alt=""
-                  className={styles.serviceIcon}
-                  loading="lazy"
-                />
-              </div>
-              <div className={styles.serviceName} style={{ fontWeight: 600 }}>
-                View All Services
-              </div>
-            </Link>
-          ) : null}
+                </div>
+                <div className={styles.serviceName} style={{ fontWeight: 600 }}>
+                  View All Services
+                </div>
+              </Link>
+            ) : null}
+          </div>
         </div>
       </div>
     </section>

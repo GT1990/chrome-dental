@@ -1,0 +1,178 @@
+.pageContainer {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #1a1a1a;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.header {
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background-color: #facc15;
+  border-radius: 2px;
+}
+
+.introSection {
+  margin-bottom: 20px;
+}
+
+.introText {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 20px;
+  border-left: 4px solid #facc15;
+  padding-left: 15px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.checkIcon {
+  color: #facc15;
+  font-weight: bold;
+  margin-right: 12px;
+  font-size: 1.2rem;
+}
+
+.processContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.processStep {
+  display: flex;
+  align-items: center;
+  background-color: #f9fafb;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.stepNumber {
+  background-color: #000000;
+  color: #facc15;
+  font-weight: bold;
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.stepText {
+  font-size: 1rem;
+  margin: 0;
+  color: #333;
+}
+
+.ctaBox {
+  margin-top: 40px;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.ctaBox h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.ctaBox p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #d1d5db;
+}
+
+.ctaButton {
+  background-color: #facc15;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctaButton:hover {
+  background-color: #eab308;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 28px 12px;
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .processStep {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stepNumber {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}

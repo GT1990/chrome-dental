@@ -128,6 +128,11 @@ export default function Header() {
   }, [isMenuOpen]);
 
   const closeMenu = () => setIsMenuOpen(false);
+  const scrollToTop = () => window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  const handleNavClick = () => {
+    scrollToTop();
+    closeMenu();
+  };
 
   return (
     <header
@@ -136,7 +141,12 @@ export default function Header() {
       }`}
     >
       <div className={`container ${styles.headerInner}`}>
-        <Link to="/" className={styles.brand} aria-label={PRACTICE.name}>
+        <Link
+          to="/"
+          className={styles.brand}
+          aria-label={PRACTICE.name}
+          onClick={handleNavClick}
+        >
           <img
             src={logo}
             alt={`${PRACTICE.name} logo`}
@@ -207,7 +217,7 @@ export default function Header() {
                       .filter(Boolean)
                       .join(" ")
                   }
-                  onClick={closeMenu}
+                  onClick={handleNavClick}
                 >
                   <span className={styles.navIcon}>{item.icon}</span>
                   <span className={styles.navLabel}>{item.label}</span>
