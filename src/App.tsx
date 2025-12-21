@@ -11,6 +11,7 @@ import Contact from './pages/Contact'
 import NewPatients from './pages/NewPatients'
 import Reviews from './pages/Reviews'
 import ServiceDetail from './pages/ServiceDetail'
+import Doctors from './pages/Doctors'
 
 export default function App(){
   return (
@@ -23,6 +24,7 @@ export default function App(){
           <Route path="/services" element={<Services />} />
           <Route path="/book" element={<BookingEmbed />} />
           <Route path="/insurance" element={<Insurance />} />
+          <Route path="/doctors" element={<Doctors />} />
           <Route path="/new-patients" element={<NewPatients />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/reviews" element={<Reviews />} />

@@ -56,6 +56,29 @@ export default function Header() {
       ),
     },
     {
+      label: "Doctors",
+      to: "/doctors",
+      icon: (
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm-7 7c0-3 3-5 7-5s7 2 7 5"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M4 8.5h4M6 6.5v4"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            fill="none"
+            strokeLinecap="round"
+          />
+        </svg>
+      ),
+    },
+    {
       label: "New Patients",
       to: "/new-patients",
       icon: (

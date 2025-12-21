@@ -1,10 +1,24 @@
 .section {
-  background-color: #1a1a1a; /* Dark gray background */
-  color: #ffffff;
+  --section-bg: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-muted: #d1d5db;
+  --accent-color: #fbbf24;
+  --card-bg: #262626;
+  --card-border: #333;
+
+  background-color: var(--section-bg);
+  color: var(--text-primary);
   padding: 5rem 1rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif;
   text-align: center;
+}
+
+.lightTheme {
+  --section-bg: #ffffff;
+  --text-primary: #0f172a;
+  --text-muted: #475569;
+  --accent-color: #fbbf24;
 }
 
 .headingWrapper {
@@ -16,18 +30,18 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 .subTitle {
   font-size: 1.125rem;
-  color: #d1d5db; /* Light gray */
+  color: var(--text-muted); /* Light gray */
   margin-bottom: 3rem;
   font-weight: 400;
 }
 
 .sectionHeader {
-  color: #fbbf24; /* Gold accent color */
+  color: var(--accent-color); /* Gold accent color */
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
@@ -36,7 +50,7 @@
 }
 
 .introText {
-  color: #d1d5db;
+  color: var(--text-muted);
   font-size: 1rem;
   line-height: 1.6;
   max-width: 700px;
@@ -56,7 +70,7 @@
 }
 
 .card {
-  background-color: #262626; /* Slightly lighter dark background for contrast */
+  background-color: var(--card-bg); /* Slightly lighter dark background for contrast */
   border-radius: 1rem;
   padding: 3rem 2rem;
   flex: 1;
@@ -66,7 +80,7 @@
   flex-direction: column;
   align-items: center;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-  border: 1px solid #333;
+  border: 1px solid var(--card-border);
 }
 
 /* Image styling - Increased size as requested */
@@ -87,7 +101,7 @@
 }
 
 .doctorName {
-  color: #fbbf24; /* Gold accent */
+  color: var(--accent-color); /* Gold accent */
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 1.5rem;

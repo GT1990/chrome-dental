@@ -17,7 +17,10 @@ export default function ExclusiveNewPatientBanner() {
               Call to learn about our current discounts and flexible options.
             </p>
           </div>
-          <Link to="/new-patients" className={`btn ${bannerStyles.cta}`}>
+          <Link
+            to="/new-patients"
+            className={`btn ${bannerStyles.cta} ${bannerStyles.ctaRight}`}
+          >
             Learn More
           </Link>
         </div>

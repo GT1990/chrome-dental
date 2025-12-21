@@ -12,6 +12,8 @@ export default function InsuranceSection() {
           those without insurance, we offer cash discounts and payment plans.
         </p>
         <InsuranceTicker />
+      </div>
+      <div className="container">
         <div
           className={`rounded shadow ${styles.banner}`}
           style={{ marginTop: "24px" }}
@@ -26,7 +28,10 @@ export default function InsuranceSection() {
               Flexible Financing and Payment Plans.
             </p>
           </div>
-          <Link to="/insurance" className={`btn ${styles.cta}`}>
+          <Link
+            to="/insurance"
+            className={`btn ${styles.cta} ${styles.ctaRight}`}
+          >
             Learn More
           </Link>
         </div>
